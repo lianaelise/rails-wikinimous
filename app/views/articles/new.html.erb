@@ -1,0 +1,24 @@
+<ul class= "list-inline">
+  <li class= "list-inline-item">
+    <h2>Add Task</h2>
+  </li>
+  <li class= "list-inline-item">
+    <%= link_to "Back to Article List", articles_path, class: "btn btn-primary"%>
+  </li>
+</ul>
+
+<%= form_for(@article) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_field :content, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+
